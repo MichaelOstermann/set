@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>set</h1>
+<h1>unplugin-set</h1>
 
 **Functional utilities for sets.**
 
