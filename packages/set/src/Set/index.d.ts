@@ -11,6 +11,7 @@ import { addOrElse } from "./addOrElse.js";
 import { addOrThrow } from "./addOrThrow.js";
 import { clone } from "./clone.js";
 import { compact } from "./compact.js";
+import { create } from "./create.js";
 import { difference } from "./difference.js";
 import { forEach } from "./forEach.js";
 import { has } from "./has.js";
@@ -18,9 +19,9 @@ import { hasAll } from "./hasAll.js";
 import { hasAny } from "./hasAny.js";
 import { hasNone } from "./hasNone.js";
 import { intersection } from "./intersection.js";
+import { is } from "./is.js";
 import { isDisjointFrom } from "./isDisjointFrom.js";
 import { isEmpty } from "./isEmpty.js";
-import { isSet } from "./isSet.js";
 import { isShallowEqual } from "./isShallowEqual.js";
 import { isSubsetOf } from "./isSubsetOf.js";
 import { isSupersetOf } from "./isSupersetOf.js";
@@ -44,6 +45,7 @@ declare namespace Set {
         addOrThrow,
         clone,
         compact,
+        create,
         difference,
         forEach,
         has,
@@ -51,9 +53,9 @@ declare namespace Set {
         hasAny,
         hasNone,
         intersection,
+        is,
         isDisjointFrom,
         isEmpty,
-        isSet,
         isShallowEqual,
         isSubsetOf,
         isSupersetOf,

@@ -2,7 +2,7 @@ import { dfdlT } from "@monstermann/dfdl"
 
 /**
  * ```ts
- * function Set.isSet(target)
+ * function Set.is(target)
  * ```
  *
  * Example
@@ -10,20 +10,20 @@ import { dfdlT } from "@monstermann/dfdl"
  * ```ts
  * import { Set } from "@monstermann/set";
  *
- * Set.isSet(Set.create([1, 2, 3])); // true
- * Set.isSet([1, 2, 3]); // false
- * Set.isSet({}); // false
+ * Set.is(Set.create([1, 2, 3])); // true
+ * Set.is([1, 2, 3]); // false
+ * Set.is({}); // false
  * ```
  *
  * ```ts
  * import { Set } from "@monstermann/set";
  *
- * pipe(Set.create([1, 2, 3]), Set.isSet()); // true
- * pipe([1, 2, 3], Set.isSet()); // false
- * pipe({}, Set.isSet()); // false
+ * pipe(Set.create([1, 2, 3]), Set.is()); // true
+ * pipe([1, 2, 3], Set.is()); // false
+ * pipe({}, Set.is()); // false
  * ```
  */
-export const isSet: {
+export const is: {
     (): (target: unknown) => target is Set<unknown>
     (target: unknown): target is Set<unknown>
 } = dfdlT((target: unknown): target is Set<unknown> => {
