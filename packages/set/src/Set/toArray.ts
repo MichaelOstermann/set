@@ -5,6 +5,8 @@ import { dfdlT } from "@monstermann/dfdl"
  * function Set.toArray(target)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

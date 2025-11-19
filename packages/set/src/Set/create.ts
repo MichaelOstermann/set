@@ -3,6 +3,8 @@
  * function Set.create(iterable?)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

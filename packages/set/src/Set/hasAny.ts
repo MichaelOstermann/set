@@ -5,6 +5,8 @@ import { dfdlT } from "@monstermann/dfdl"
  * function Set.hasAny(target, values)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

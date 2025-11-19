@@ -6,6 +6,8 @@ import { cloneSet } from "@monstermann/remmi"
  * function Set.clone(target)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

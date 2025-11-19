@@ -6,6 +6,8 @@ import { cloneSet } from "@monstermann/remmi"
  * function Set.remove(target, value)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

@@ -7,6 +7,8 @@ import { cloneSet } from "@monstermann/remmi"
  * function Set.compact(target)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *

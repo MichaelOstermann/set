@@ -6,6 +6,8 @@ import { cloneSet } from "@monstermann/remmi"
  * function Set.addOrElse(target, value, orElse)
  * ```
  *
+ * Example
+ *
  * ```ts
  * import { Set } from "@monstermann/set";
  *
