@@ -22,7 +22,6 @@ aside: true
 - Reference preservation (`mapEach(set, (v) => v) === set`)
 - Pipe-friendly (`pipe(mapEach((v) => v))(set)`)
 - Graceful failure handling (`get()`, `getOr()`, `getOrElse()`, `getOrThrow()`)
-- [Tree-shaking](#tree-shaking)
 
 ## Installation
 
