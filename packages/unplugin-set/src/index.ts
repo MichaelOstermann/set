@@ -25,7 +25,7 @@ export default createUnplugin<Options>(({ debug, enforce, exclude, include } = {
                     debug: shouldDebug(id),
                     resolve({ importAlias, importName, importPath, propertyName }) {
                         if (importPath === "@monstermann/set" && importName === "Set")
-                            return `import { ${propertyName} as ${importAlias} } from "@monstermann/set/Set/${propertyName}.js"`
+                            return `import { ${propertyName} as ${importAlias} } from "@monstermann/set/Set/${propertyName}.mjs"`
                         return undefined
                     },
                 })
