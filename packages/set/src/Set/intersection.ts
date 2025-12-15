@@ -28,16 +28,16 @@ export const intersection: {
     if (target.size === 0) return target
     if (source.size === 0) return source
 
+    let hasNonMatch = false
+    const result = new Set<T>()
     for (const value of target) {
         if (!source.has(value as any)) {
-            const result = new Set<T>()
-            for (const value of target) {
-                if (!source.has(value as any)) continue
-                result.add(value)
-            }
-            return result
+            hasNonMatch = true
+        }
+        else {
+            result.add(value)
         }
     }
 
-    return target
+    return hasNonMatch ? result : target
 }, 2)

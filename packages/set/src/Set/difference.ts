@@ -27,16 +27,16 @@ export const difference: {
 } = dfdlT(<T, U>(target: Set<T>, source: Set<U>): Set<T> => {
     if (source.size === 0) return target
 
+    let hasOverlap = false
+    const result = new Set<T>()
     for (const value of target) {
         if (source.has(value as any)) {
-            const result = new Set<T>()
-            for (const value of target) {
-                if (source.has(value as any)) continue
-                result.add(value)
-            }
-            return result
+            hasOverlap = true
+        }
+        else {
+            result.add(value)
         }
     }
 
-    return target
+    return hasOverlap ? result : target
 }, 2)

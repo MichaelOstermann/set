@@ -28,14 +28,16 @@ export const union: {
     if (source.size === 0) return target
     if (target.size === 0) return source
 
+    let result: Set<T | U> | undefined
     for (const element of source) {
         if (!target.has(element as any)) {
-            const result = new Set<T | U>()
-            for (const a of target) result.add(a)
-            for (const b of source) result.add(b)
-            return result
+            if (result === undefined) {
+                result = new Set<T | U>()
+                for (const a of target) result.add(a)
+            }
+            result.add(element)
         }
     }
 
-    return target
+    return result ?? target
 }, 2)
