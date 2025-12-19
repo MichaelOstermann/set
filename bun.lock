@@ -20,7 +20,7 @@
     },
     "packages/set": {
       "name": "@monstermann/set",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "dependencies": {
         "@monstermann/dfdl": "^0.1.0",
         "@monstermann/remmi": "^0.0.0",
@@ -28,7 +28,7 @@
     },
     "packages/unplugin-set": {
       "name": "@monstermann/unplugin-set",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "dependencies": {
         "@monstermann/tree-shake-import-namespaces": "^0.2.2",
         "unplugin": "^2.3.4",
