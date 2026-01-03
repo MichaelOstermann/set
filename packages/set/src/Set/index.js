@@ -6,9 +6,6 @@
 
 import { add } from "./add.js";
 import { addAll } from "./addAll.js";
-import { addOr } from "./addOr.js";
-import { addOrElse } from "./addOrElse.js";
-import { addOrThrow } from "./addOrThrow.js";
 import { clone } from "./clone.js";
 import { compact } from "./compact.js";
 import { create } from "./create.js";
@@ -28,9 +25,6 @@ import { isSupersetOf } from "./isSupersetOf.js";
 import { mapEach } from "./mapEach.js";
 import { remove } from "./remove.js";
 import { removeAll } from "./removeAll.js";
-import { removeOr } from "./removeOr.js";
-import { removeOrElse } from "./removeOrElse.js";
-import { removeOrThrow } from "./removeOrThrow.js";
 import { size } from "./size.js";
 import { symmetricDifference } from "./symmetricDifference.js";
 import { toArray } from "./toArray.js";
@@ -39,9 +33,6 @@ import { union } from "./union.js";
 export const Set = {
     add,
     addAll,
-    addOr,
-    addOrElse,
-    addOrThrow,
     clone,
     compact,
     create,
@@ -61,9 +52,6 @@ export const Set = {
     mapEach,
     remove,
     removeAll,
-    removeOr,
-    removeOrElse,
-    removeOrThrow,
     size,
     symmetricDifference,
     toArray,
