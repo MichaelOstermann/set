@@ -1,8 +1,13 @@
 # hasAll
 
 ```ts
-function Set.hasAll(target, values)
+function Set.hasAll<T>(
+    target: ReadonlySet<T>,
+    values: Iterable<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if the set contains all values from the iterable, `false` otherwise.
 
 ## Example
 

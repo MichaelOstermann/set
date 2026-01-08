@@ -1,8 +1,13 @@
 # hasAny
 
 ```ts
-function Set.hasAny(target, values)
+function Set.hasAny<T>(
+    target: ReadonlySet<T>,
+    values: Iterable<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if the set contains at least one value from the iterable, `false` otherwise.
 
 ## Example
 

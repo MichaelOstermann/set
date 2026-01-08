@@ -1,19 +1,29 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # forEach
+ *
  * ```ts
- * function Set.forEach(target, fn)
+ * function Set.forEach<T>(
+ *     target: ReadonlySet<T>,
+ *     fn: (
+ *         value: NoInfer<T>,
+ *         target: ReadonlySet<NoInfer<T>>,
+ *     ) => unknown,
+ * ): ReadonlySet<T>
  * ```
  *
- * Example
+ * Executes a function for each value in the set and returns the set unchanged.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.forEach(Set.create([1, 2, 3]), (value) => console.log(value)); // Set([1, 2, 3])
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(
@@ -21,6 +31,7 @@ import { dfdlT } from "@monstermann/dfdl"
  *     Set.forEach((value) => console.log(value)),
  * ); // Set([1, 2, 3])
  * ```
+ *
  */
 export const forEach: {
     <T>(fn: (value: NoInfer<T>, target: ReadonlySet<NoInfer<T>>) => unknown): (target: Set<T>) => Set<T>

@@ -1,8 +1,12 @@
 # compact
 
 ```ts
-function Set.compact(target)
+function Set.compact<T>(
+    target: ReadonlySet<T>,
+): ReadonlySet<NonNil<T>>
 ```
+
+Returns a set with all `null` and `undefined` values removed.
 
 ## Example
 

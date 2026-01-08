@@ -1,8 +1,12 @@
 # create
 
 ```ts
-function Set.create(iterable?)
+function Set.create<T>(
+    iterable?: Iterable<T> | null | undefined,
+): Set<T>
 ```
+
+Creates a new set from an optional iterable.
 
 ## Example
 

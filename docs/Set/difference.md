@@ -1,8 +1,13 @@
 # difference
 
 ```ts
-function Set.difference(target, source)
+function Set.difference<T, U>(
+    target: Set<T>,
+    source: Set<U>,
+): Set<T>
 ```
+
+Returns a set containing all values from the target set that are not in the source set.
 
 ## Example
 

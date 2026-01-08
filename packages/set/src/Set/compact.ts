@@ -3,25 +3,32 @@ import { dfdlT } from "@monstermann/dfdl"
 import { cloneSet } from "@monstermann/remmi"
 
 /**
+ * # compact
+ *
  * ```ts
- * function Set.compact(target)
+ * function Set.compact<T>(
+ *     target: ReadonlySet<T>,
+ * ): ReadonlySet<NonNil<T>>
  * ```
  *
- * Example
+ * Returns a set with all `null` and `undefined` values removed.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.compact(Set.create([1, null, 2, undefined])); // Set([1, 2])
  * Set.compact(Set.create([1, 2, 3])); // Set([1, 2, 3])
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create([1, null, 2, undefined]), Set.compact()); // Set([1, 2])
  * pipe(Set.create([1, 2, 3]), Set.compact()); // Set([1, 2, 3])
  * ```
+ *
  */
 export const compact: {
     <T>(): (target: Set<T>) => Set<NonNil<T>>

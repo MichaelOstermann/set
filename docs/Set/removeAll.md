@@ -1,8 +1,13 @@
 # removeAll
 
 ```ts
-function Set.removeAll(target, values)
+function Set.removeAll<T>(
+    target: ReadonlySet<T>,
+    values: Iterable<NoInfer<T>>,
+): ReadonlySet<T>
 ```
+
+Returns a set with all values from the iterable removed. Values that don't exist in the set are skipped.
 
 ## Example
 

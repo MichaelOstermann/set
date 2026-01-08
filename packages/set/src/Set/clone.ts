@@ -2,25 +2,30 @@ import { dfdlT } from "@monstermann/dfdl"
 import { cloneSet } from "@monstermann/remmi"
 
 /**
+ * # clone
+ *
  * ```ts
- * function Set.clone(target)
+ * function Set.clone<T>(target: ReadonlySet<T>): Set<T>
  * ```
  *
- * Example
+ * Returns a shallow copy of the set, unless marked as mutable with `markAsMutable` inside a mutation context (see [@monstermann/remmi](https://michaelostermann.github.io/remmi/#clonearray-array)).
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * const original = Set.create([1, 2, 3]);
  * const copy = Set.clone(original); // Set { 1, 2, 3 }
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * const original = Set.create([1, 2, 3]);
  * const copy = pipe(original, Set.clone()); // Set { 1, 2, 3 }
  * ```
+ *
  */
 export const clone: {
     (): <T>(target: ReadonlySet<T>) => Set<T>

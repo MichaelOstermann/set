@@ -1,8 +1,13 @@
 # isDisjointFrom
 
 ```ts
-function Set.isDisjointFrom(target, source)
+function Set.isDisjointFrom<T>(
+    target: ReadonlySet<T>,
+    source: ReadonlySet<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if the sets have no values in common, `false` otherwise.
 
 ## Example
 

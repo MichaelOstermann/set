@@ -1,8 +1,13 @@
 # isSubsetOf
 
 ```ts
-function Set.isSubsetOf(target, source)
+function Set.isSubsetOf<T>(
+    target: ReadonlySet<T>,
+    source: ReadonlySet<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if all values in the target set are also in the source set, `false` otherwise.
 
 ## Example
 

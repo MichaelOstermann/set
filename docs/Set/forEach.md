@@ -1,8 +1,16 @@
 # forEach
 
 ```ts
-function Set.forEach(target, fn)
+function Set.forEach<T>(
+    target: ReadonlySet<T>,
+    fn: (
+        value: NoInfer<T>,
+        target: ReadonlySet<NoInfer<T>>,
+    ) => unknown,
+): ReadonlySet<T>
 ```
+
+Executes a function for each value in the set and returns the set unchanged.
 
 ## Example
 

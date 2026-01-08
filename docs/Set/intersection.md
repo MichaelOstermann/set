@@ -1,8 +1,13 @@
 # intersection
 
 ```ts
-function Set.intersection(target, source)
+function Set.intersection<T, U>(
+    target: Set<T>,
+    source: Set<U>,
+): Set<T | U>
 ```
+
+Returns a set containing only the values that exist in both sets.
 
 ## Example
 

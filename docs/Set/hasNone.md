@@ -1,8 +1,13 @@
 # hasNone
 
 ```ts
-function Set.hasNone(target, values)
+function Set.hasNone<T>(
+    target: ReadonlySet<T>,
+    values: Iterable<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if the set contains none of the values from the iterable, `false` otherwise.
 
 ## Example
 

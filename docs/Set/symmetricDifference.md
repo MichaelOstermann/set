@@ -1,8 +1,13 @@
 # symmetricDifference
 
 ```ts
-function Set.symmetricDifference(target, source)
+function Set.symmetricDifference<T, U>(
+    target: Set<T>,
+    source: Set<U>,
+): Set<T | U>
 ```
+
+Returns a set containing values that exist in either set but not in both.
 
 ## Example
 

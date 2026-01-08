@@ -1,25 +1,33 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # isSupersetOf
+ *
  * ```ts
- * function Set.isSupersetOf(target, source)
+ * function Set.isSupersetOf<T>(
+ *     target: ReadonlySet<T>,
+ *     source: ReadonlySet<NoInfer<T>>,
+ * ): boolean
  * ```
  *
- * Example
+ * Returns `true` if the target set contains all values from the source set, `false` otherwise.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.isSupersetOf(Set.create([1, 2, 3]), Set.create([1, 2])); // true
  * Set.isSupersetOf(Set.create([1, 2, 3]), Set.create([1, 4])); // false
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create([1, 2, 3]), Set.isSupersetOf(Set.create([1, 2]))); // true
  * pipe(Set.create([1, 2, 3]), Set.isSupersetOf(Set.create([1, 4]))); // false
  * ```
+ *
  */
 export const isSupersetOf: {
     <T>(source: ReadonlySet<NoInfer<T>>): (target: ReadonlySet<T>) => boolean

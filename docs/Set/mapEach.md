@@ -1,8 +1,16 @@
 # mapEach
 
 ```ts
-function Set.mapEach(target, fn)
+function Set.mapEach<T, U>(
+    target: ReadonlySet<T>,
+    fn: (
+        value: NoInfer<T>,
+        target: ReadonlySet<NoInfer<T>>,
+    ) => U,
+): ReadonlySet<U>
 ```
+
+Returns a new set with each value transformed by the mapping function.
 
 ## Example
 

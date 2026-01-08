@@ -1,8 +1,13 @@
 # has
 
 ```ts
-function Set.has(target, value)
+function Set.has<T>(
+    target: ReadonlySet<T>,
+    value: NoInfer<T>,
+): boolean
 ```
+
+Returns `true` if the set contains the value, `false` otherwise.
 
 ## Example
 

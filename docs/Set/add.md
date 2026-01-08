@@ -1,8 +1,13 @@
 # add
 
 ```ts
-function Set.add(target, value)
+function Set.add<T>(
+    target: ReadonlySet<T>,
+    value: NoInfer<T>,
+): ReadonlySet<T>
 ```
+
+Returns a set with the value added. If the value already exists in the set, returns the original set unchanged.
 
 ## Example
 

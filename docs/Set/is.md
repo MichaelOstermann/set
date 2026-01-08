@@ -1,8 +1,10 @@
 # is
 
 ```ts
-function Set.is(target)
+function Set.is(target: unknown): target is Set<unknown>
 ```
+
+Returns `true` if the value is a Set, `false` otherwise.
 
 ## Example
 

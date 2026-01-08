@@ -1,8 +1,13 @@
 # isShallowEqual
 
 ```ts
-function Set.isShallowEqual(target, source)
+function Set.isShallowEqual<T>(
+    target: ReadonlySet<T>,
+    source: ReadonlySet<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if both sets contain the same values, `false` otherwise.
 
 ## Example
 

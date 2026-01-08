@@ -1,8 +1,10 @@
 # toArray
 
 ```ts
-function Set.toArray(target)
+function Set.toArray<T>(target: ReadonlySet<T>): T[]
 ```
+
+Converts the set to an array.
 
 ## Example
 

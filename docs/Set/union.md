@@ -1,8 +1,13 @@
 # union
 
 ```ts
-function Set.union(target, source)
+function Set.union<T, U>(
+    target: Set<T>,
+    source: Set<U>,
+): Set<T | U>
 ```
+
+Returns a set containing all values from both sets.
 
 ## Example
 

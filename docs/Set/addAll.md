@@ -1,8 +1,13 @@
 # addAll
 
 ```ts
-function Set.addAll(target, values)
+function Set.addAll<T>(
+    target: ReadonlySet<T>,
+    values: Iterable<NoInfer<T>>,
+): ReadonlySet<T>
 ```
+
+Returns a set with all values from the iterable added. Values that already exist in the set are skipped.
 
 ## Example
 

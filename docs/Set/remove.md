@@ -1,8 +1,13 @@
 # remove
 
 ```ts
-function Set.remove(target, value)
+function Set.remove<T>(
+    target: ReadonlySet<T>,
+    value: NoInfer<T>,
+): ReadonlySet<T>
 ```
+
+Returns a set with the value removed. If the value doesn't exist in the set, returns the original set unchanged.
 
 ## Example
 

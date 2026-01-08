@@ -1,25 +1,33 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # isSubsetOf
+ *
  * ```ts
- * function Set.isSubsetOf(target, source)
+ * function Set.isSubsetOf<T>(
+ *     target: ReadonlySet<T>,
+ *     source: ReadonlySet<NoInfer<T>>,
+ * ): boolean
  * ```
  *
- * Example
+ * Returns `true` if all values in the target set are also in the source set, `false` otherwise.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.isSubsetOf(Set.create([1, 2]), Set.create([1, 2, 3])); // true
  * Set.isSubsetOf(Set.create([1, 4]), Set.create([1, 2, 3])); // false
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create([1, 2]), Set.isSubsetOf(Set.create([1, 2, 3]))); // true
  * pipe(Set.create([1, 4]), Set.isSubsetOf(Set.create([1, 2, 3]))); // false
  * ```
+ *
  */
 export const isSubsetOf: {
     <T>(source: ReadonlySet<NoInfer<T>>): (target: ReadonlySet<T>) => boolean

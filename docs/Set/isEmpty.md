@@ -1,8 +1,12 @@
 # isEmpty
 
 ```ts
-function Set.isEmpty(target)
+function Set.isEmpty<T extends ReadonlySet<unknown>>(
+    target: T,
+): boolean
 ```
+
+Returns `true` if the set contains no values, `false` otherwise.
 
 ## Example
 

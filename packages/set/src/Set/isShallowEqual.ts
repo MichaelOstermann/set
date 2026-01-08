@@ -1,25 +1,33 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # isShallowEqual
+ *
  * ```ts
- * function Set.isShallowEqual(target, source)
+ * function Set.isShallowEqual<T>(
+ *     target: ReadonlySet<T>,
+ *     source: ReadonlySet<NoInfer<T>>,
+ * ): boolean
  * ```
  *
- * Example
+ * Returns `true` if both sets contain the same values, `false` otherwise.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.isShallowEqual(Set.create([1, 2, 3]), Set.create([3, 2, 1])); // true
  * Set.isShallowEqual(Set.create([1, 2]), Set.create([1, 2, 3])); // false
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create([1, 2, 3]), Set.isShallowEqual(Set.create([3, 2, 1]))); // true
  * pipe(Set.create([1, 2]), Set.isShallowEqual(Set.create([1, 2, 3]))); // false
  * ```
+ *
  */
 export const isShallowEqual: {
     <T>(source: ReadonlySet<NoInfer<T>>): (target: ReadonlySet<T>) => boolean

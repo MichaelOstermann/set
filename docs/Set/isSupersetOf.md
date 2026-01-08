@@ -1,8 +1,13 @@
 # isSupersetOf
 
 ```ts
-function Set.isSupersetOf(target, source)
+function Set.isSupersetOf<T>(
+    target: ReadonlySet<T>,
+    source: ReadonlySet<NoInfer<T>>,
+): boolean
 ```
+
+Returns `true` if the target set contains all values from the source set, `false` otherwise.
 
 ## Example
 

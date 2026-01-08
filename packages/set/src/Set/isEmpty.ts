@@ -1,25 +1,32 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # isEmpty
+ *
  * ```ts
- * function Set.isEmpty(target)
+ * function Set.isEmpty<T extends ReadonlySet<unknown>>(
+ *     target: T,
+ * ): boolean
  * ```
  *
- * Example
+ * Returns `true` if the set contains no values, `false` otherwise.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.isEmpty(Set.create()); // true
  * Set.isEmpty(Set.create([1, 2, 3])); // false
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create(), Set.isEmpty()); // true
  * pipe(Set.create([1, 2, 3]), Set.isEmpty()); // false
  * ```
+ *
  */
 export const isEmpty: {
     (): <T extends ReadonlySet<unknown>>(target: T) => boolean

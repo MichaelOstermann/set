@@ -1,13 +1,17 @@
 import { dfdlT } from "@monstermann/dfdl"
 
 /**
+ * # is
+ *
  * ```ts
- * function Set.is(target)
+ * function Set.is(target: unknown): target is Set<unknown>
  * ```
  *
- * Example
+ * Returns `true` if the value is a Set, `false` otherwise.
  *
- * ```ts
+ * ## Example
+ *
+ * ```ts [data-first]
  * import { Set } from "@monstermann/set";
  *
  * Set.is(Set.create([1, 2, 3])); // true
@@ -15,13 +19,14 @@ import { dfdlT } from "@monstermann/dfdl"
  * Set.is({}); // false
  * ```
  *
- * ```ts
+ * ```ts [data-last]
  * import { Set } from "@monstermann/set";
  *
  * pipe(Set.create([1, 2, 3]), Set.is()); // true
  * pipe([1, 2, 3], Set.is()); // false
  * pipe({}, Set.is()); // false
  * ```
+ *
  */
 export const is: {
     (): (target: unknown) => target is Set<unknown>

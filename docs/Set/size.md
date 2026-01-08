@@ -1,8 +1,12 @@
 # size
 
 ```ts
-function Set.size(target)
+function Set.size<T extends ReadonlySet<unknown>>(
+    target: T,
+): number
 ```
+
+Returns the number of values in the set.
 
 ## Example
 
